@@ -1,0 +1,30 @@
+class Solution:
+    # @param num, a list of integer
+    # @return an integer
+    def findMin(self, num):
+        
+        # if list is null
+        if len(num) == 0 :
+            print 'the list is null'
+            return 0
+            
+        #if the length of list is 1,the mininum is first one 
+        if len(num) == 1 :
+            return num[0]
+        
+        #init the minnum and count
+        min = 0
+        num_count = 1
+        
+        while num_count <= len(num) - 1 :
+            if num[num_count - 1] > num[num_count] :
+                #if some num[i] is larger than num[i++],the minnum is the num[i]
+                min = num[num_count]
+                return min
+            num_count = num_count + 1
+            
+        #if the list is the sorted array, then return fisrt one
+        if num_count == len(num) :
+            return num[0]
+            
+        return min
