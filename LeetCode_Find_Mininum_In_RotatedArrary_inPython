@@ -12,13 +12,13 @@ class Solution:
         if len(num) == 1 :
             return num[0]
         
-        #init the minnum and count
+        #init the mininum and count
         min = 0
         num_count = 1
         
         while num_count <= len(num) - 1 :
             if num[num_count - 1] > num[num_count] :
-                #if some num[i] is larger than num[i++],the minnum is the num[i]
+                #if some num[i] is larger than num[i++],the mininum is the num[i]
                 min = num[num_count]
                 return min
             num_count = num_count + 1
