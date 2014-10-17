@@ -2,15 +2,17 @@ class Solution:
     # @param A, a list of integers
     # @return an integer
     def maxProduct(self, A):
-        max_product = [A[0], A[0]]
-        index = 1
-        globel = A[0]
-        
+    
         if len(A) == 0 :
             return 0 
             
         if len(A) == 1 :
-            return A[0]
+            return A[0]  
+            
+        max_product = [A[0], A[0]]
+        index = 1
+        globel = A[0]
+        
             
         while index < len(A) :
             max_copy = max_product[0]
