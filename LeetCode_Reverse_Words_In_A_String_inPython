@@ -1,0 +1,37 @@
+class Solution:
+    # @param s, a string
+    # @return a string
+    def reverseWords(self, s):
+        test_string = s
+        index = 0
+        eindex = 0
+        test_spilit = []
+    
+        while eindex < len(test_string) :
+            if test_string[0] == ' ' :
+                test_string = test_string[1:len(test_string)]
+                eindex = 0
+                continue
+            else :
+                break
+        eindex = 0
+
+        while index < len(test_string) :
+            if test_string[index] == ' ' :
+                test_spilit.append(test_string[0:index])
+                test_string = test_string[index:len(test_string)]
+                while eindex < len(test_string) :
+                    if test_string[0] == ' ' :
+                        test_string = test_string[1:len(test_string)]
+                        eindex = 0
+                        continue
+                    else :
+                        break
+                index = 0
+                continue
+            if index == (len(test_string) - 1) :
+                test_spilit.append(test_string[0:index + 1])
+            index = index + 1
+
+        null = ' '
+        return null.join(test_spilit[::-1])
